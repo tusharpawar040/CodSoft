@@ -10,6 +10,10 @@
   --max-width: 1200px;
 }
 
+body,html{
+  overflow-x: hidden;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -174,9 +178,83 @@ ul li a:hover {
 }
 
 .image img {
-  width: min(25rem, 90%);
+  width: min(22rem, 90%);
   border-radius: 100%;
 }
+
+
+/*  */
+
+h2{
+  color: var(--text-dark);
+}
+h3{
+  color: var(--text-light);
+  border-bottom: 2px solid var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.projects{
+  display: flex;
+  flex-direction: row;
+}
+
+.card{
+  width: 600px;
+  margin: 2%;
+  padding: 2%;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+/* .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  max-height: 600px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+} */
+.head{
+  /* width: 10rem; */
+  /* border-bottom: 2px solid #ea33a7; */
+}
+
+.contact{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+button{
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: .7rem 1rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-top: 20px;
+}
+button:hover{
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+
+}
+.contact-icon{
+  margin-top: 10px;
+}
+.footer{
+  height: 10rem;
+  background-color: #6b7280;
+  align-items: center;
+  text-align: center;
+}
+
+.footer p{
+  padding-top: 3rem;
+}
+
 
 @media (width < 750px) {
   nav .checkbox {
@@ -216,4 +294,64 @@ ul li a:hover {
   .action__btns {
     margin: auto;
   }
+
+  .skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card{
+    width: 80%;
+    align-items: center;
+  }
+}
+
+
+
+/* ANMATION */
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* .description{
+  animation-duration: 3s;
+  animation-name: slidein;
+} */
+
+.title{
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+.card:hover{
+  color: white;
+  background-color: #1f2937;
 }
